@@ -1,0 +1,326 @@
+/* --- Global Styles & Reset --- */
+:root {
+    --color-primary-dark: #05496B;/* Used for header/footer background */
+    --color-secondary-dark: #017BC6; /* Deep blue/green for project card */
+    --color-second-grren: rgb(20, 83, 20);
+    --color-accent-red: #cc2936; /* Ring and text accent color */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-bg-light: #f9f9f9;
+    --font-family-main: 'Poppins', sans-serif;
+    --max-width-container: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Utility Button Style --- */
+.btn-read-more {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--color-text-dark); /* Dark background for the button */
+    color: var(--color-text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-read-more:hover {
+    background-color: #333;
+}
+
+.btn-read-more.dark-bg {
+    background-color: var(--color-primary-dark);
+}
+
+/* --- 1. Header & Navigation --- */
+.main-header {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 15px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+   width: 100px;
+    height: 65px; 
+    /* filter: brightness(0) invert(1); If the logo is black, this makes it white */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    padding: 0 15px;
+    font-weight: 300;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    opacity: 1;
+    font-weight: 400;
+}
+
+.login-signup a {
+    font-weight: 600;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 20px;
+    margin-left: 5px;
+}
+
+/* Banner */
+.banner {
+  margin-top: 80px;
+  position: relative;
+  height: 500px;
+  background: url('../image/pngtree-building-modern-city-picture-image_2444020.jpg') no-repeat center center/cover;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 77, 115, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.banner h2 {
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Projects */
+.projects {
+  
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.project-box {
+  max-width: 1600px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-images {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5px;
+  background: #f9f9f9;
+}
+
+.project-images img {
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+}
+
+.small-images {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.small-images img {
+  height: 50%;
+}
+
+/* Info Section */
+.project-info {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  padding: 20px;
+  background: #fff;
+}
+
+.project-info h3 {
+  color: #004d73;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  margin: 4px 0;
+  color: #444;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.btn-view-details {
+  display: flex;
+  gap: 10px;
+  padding: 4px 30px;
+  background-color: gainsboro;
+  color: var(--color-text-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 14px;
+  transition: background-color 0.3s;
+}
+.dot{
+  width: 25px;
+  height: 25px;
+  background-color: rgb(5, 105, 5);
+  border-radius: 50%;
+}
+.btn-view-details:hover {
+  background-color: #004d66;
+}
+.dot:hover{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+/* Footer */
+
+.main-footer {
+    background-color:var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 40px 0;
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-col.logo-col {
+    flex: 2; /* Give more space to the logo/main info column */
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--color-text-light);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 300;
+    
+    font-size: 1.2rem;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.contact-col p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects {
+    padding: 30px 20px;
+  }
+
+  .project-images {
+    grid-template-columns: 1fr;
+  }
+
+  .small-images {
+    flex-direction: row;
+  }
+
+  .small-images img {
+    width: 50%;
+    height: 120px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,384 @@
+/* --- Global Styles & Reset --- */
+:root {
+    --color-primary-dark: #05496B;/* Used for header/footer background */
+    --color-secondary-dark: #017BC6; /* Deep blue/green for project card */
+    --color-second-grren: rgb(20, 83, 20);
+    --color-accent-red: #cc2936; /* Ring and text accent color */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-bg-light: #f9f9f9;
+    --font-family-main: 'Poppins', sans-serif;
+    --max-width-container: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Utility Button Style --- */
+.btn-read-more {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--color-text-dark); /* Dark background for the button */
+    color: var(--color-text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-read-more:hover {
+    background-color: #333;
+}
+
+.btn-read-more.dark-bg {
+    background-color: var(--color-primary-dark);
+}
+
+/* --- 1. Header & Navigation --- */
+.main-header {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 15px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+   width: 100px;
+    height: 65px; 
+    /* filter: brightness(0) invert(1); If the logo is black, this makes it white */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    padding: 0 15px;
+    font-weight: 300;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    opacity: 1;
+    font-weight: 400;
+}
+
+.login-signup a {
+    font-weight: 600;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 20px;
+    margin-left: 5px;
+}
+
+/* --- 2. Hero Section (About Banner) --- */
+.about-hero-section {
+    margin-top: 40px;
+    background: url('../image/iStock-1460762245-1030x693-1.jpg') no-repeat center center/cover;
+    height: 450px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.hero-overlay {
+    /* Subtle dark blue overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 51, 68, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+/* --- 3. Standard & Values Introduction --- */
+.intro-section {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.text-center-content {
+    max-width: 800px;
+}
+
+.intro-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-primary-dark);
+}
+
+.subtitle-text {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* --- 4. Mission, Vision, Values, Passion Section --- */
+.mvvp-section {
+    padding: 20px 0 80px;
+}
+
+.mvvp-section .container {
+    max-width:950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mvvp-image-block {
+    margin-bottom: 40px;
+}
+
+.mvvp-image-block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mvvp-content-block {
+    width: 100%;
+}
+
+.mvvp-item {
+    padding: 20px 0;
+    border-top: 1px solid var(--color-mvvp-line);
+   
+}
+
+.mvvp-item:last-child {
+    border-bottom: 1px solid var(--color-mvvp-line);
+}
+
+.mvvp-item h3 {
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 5px;
+}
+
+.mvvp-item p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+}
+
+/* --- 5. Business Verticals Section --- */
+.verticals-section {
+    
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title-dark {
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.section-subtitle-dark {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.verticals-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+    background-color: black;
+}
+
+.vertical-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-item img {
+    width: 100%;
+    height: 350px; /* Uniform height for visual consistency */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.vertical-item:hover img {
+    transform: scale(1.05);
+}
+
+.vertical-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-text-light);
+    padding: 15px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Experience Bar */
+.experience-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.experience-bar span strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-red);
+    margin-right: 5px;
+}
+
+/* Footer */
+
+.main-footer {
+    background-color:var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 40px 0;
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-col.logo-col {
+    flex: 2; /* Give more space to the logo/main info column */
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--color-text-light);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 300;
+    
+    font-size: 1.2rem;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.contact-col p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    
+}
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 900px) {
+    .about-hero-section {
+        height: 300px;
+    }
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .verticals-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .vertical-item img {
+        height: 200px;
+    }
+
+    .experience-bar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .experience-bar span {
+        margin-bottom: 10px;
+    }
+
+    /* Footer responsiveness should be consistent with the home page */
+    /* ... (Footer styles from previous answer's media query) ... */
+}
+
+@media (max-width: 500px) {
+    .verticals-gallery {
+        grid-template-columns: 1fr;
+    }
+}
